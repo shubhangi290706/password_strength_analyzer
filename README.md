@@ -1,15 +1,16 @@
-## Simple Vulnerability Scanner
+# Password Strength Analyzer
 
-Simple Python application to scan commonly used ports and analyze HTTP headers security.
+Checks password strength and hashes passwords securely.
 
-### How It Works - Common port scanner (FTP, SSH, HTTP, HTTPS, RDP, MySQL)
-- Ports/services scan
-- Search for the absence of security headers in HTTP headers, revealing server details
-- Generates a text report ## Technology Used: Python 3, socket, requests, datetime
+## What it does
+- Scores password strength (length, case, numbers, symbols)
+- Flags common weak passwords
+- Hashes, random salt, 600,000 iterations
+- Verifies hashes using constant-time comparison
 
-### How To Run:
-1. `pip install requests`
-2. Start Jupyter Notebook/VSCode with file `miniproject.ipynb` 
-3. Run all code cells (default IP address is `127.0.0.1`)
-4. View `vulnerability_report.txt` file ## Disclaimer
-Educational purpose only. Scanning other systems without their consent is illegal.
+## Tech
+Python, hashlib, hmac
+
+## Run
+Open `passwordchecker.ipynb` and run all cells. Enter a password when prompted.
+
